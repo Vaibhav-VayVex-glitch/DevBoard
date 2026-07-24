@@ -1,0 +1,16 @@
+.LeftNavigationPanel{
+    display: flex;
+    border:1px solid red;
+    flex-direction: column;
+    justify-content: space-between;
+
+    height: 100%;
+
+    width:20%;
+}
+
+.pages{
+    display: flex;
+    flex-direction: column;
+
+}
