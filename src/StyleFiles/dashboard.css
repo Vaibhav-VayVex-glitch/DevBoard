@@ -1,0 +1,120 @@
+.tasks_and_updates{
+    display: flex;
+    gap:5px;
+    width:100%;
+}
+
+.dashboard{
+    width:100%;
+}
+
+/* info cardss */
+.infoCardLane{
+
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    border:1px solid yellow;
+
+    .type_and_image{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .infocard{
+        display: flex;
+        flex-direction: column;
+        border: 1px solid black;
+        width:23%;
+    }
+
+}
+
+/* todays goals */
+.todaygoalshead{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.TodayGoals{
+    border: 1px solid brown;
+    width: fit-content;
+}
+
+/* Upcoming dealdines */
+
+.upcomingDeadlines{
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    border:1px solid green;
+}
+
+.UDhead{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.UD{
+    display: flex;
+    gap: 8px;
+}
+
+/*Welcome*/
+.welcome{
+    display: flex;
+    flex-direction: column;
+    border:1px solid green;
+}
+
+.greeting_streak{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+/* Recent Activity */
+
+.recentActivity{
+    border:1px solid red;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+}
+
+.RAhead{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+/* date and progress */
+
+.date_and_progress{
+    display: flex;
+    flex-direction: row;
+    gap:5px;
+}
+
+/* Calender */
+.calender{
+    width:33%;
+    height:123px;
+    border:1px solid black;
+}
+
+/* Productivity Score */
+.productivityScore{
+    width:35%;
+    height:123px;
+    border:1px solid black;
+}
+/* This Week */
+.thisWeek{
+    width:33%;
+    height:123px;
+    border:1px solid black;
+}

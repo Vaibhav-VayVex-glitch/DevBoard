@@ -1,3 +1,4 @@
+import DashBoard from '../DashBoardComponents/DashBoard';
 import SearchPanel from './SearchPanel';
 
 
@@ -8,6 +9,7 @@ function RightPanel(){
         <div className="rightlane">
 
             <SearchPanel/>
+            <DashBoard/>
 
         </div>
     )
