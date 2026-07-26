@@ -1,0 +1,138 @@
+.dsaTracker{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.DThead{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border:1px solid brown;
+}
+
+.streak_rank{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border:1px solid yellow;
+    width:35%;
+}   
+
+.problemMeters{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border:1px solid red;
+    gap:5px;
+}
+
+.patternMeter{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.meterLane{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border:1px solid blue;
+}
+
+.innerCircle{
+    background-color: black;
+    color: white;
+    border-radius: 100%;
+    width:85%;
+    height: 85%;
+    text-align: center;
+}
+
+.outerCircle{
+    background-color: orange;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:40px;
+    height:40px;
+}
+
+.difficultymeter{
+    border:1px solid green;
+    width:50%;
+}
+
+.chart_and_values{
+    display: flex;
+    flex-direction: row;
+    width:100%;
+}
+
+.valuesList{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.valueBox{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.patternCardLane{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap:5px;
+}
+
+.patternCard{
+    display: flex;
+    flex-direction: column;
+    border:1px solid black;
+}
+
+.solved_Number_Percentage{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.revisionQueueLane{
+    display: flex;
+    flex-direction: column;
+    width:100%;
+    border:1px solid blue;
+}
+
+.RQhead{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.RQcards{
+    display: flex;
+    flex-direction: column;
+    width:100%;
+}
+
+.revisionCard{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    border:1px solid black;
+}
+
+.RCright{
+    display: flex;
+    flex-direction: row;
+    gap:10px;
+
+    span{
+        border:1px solid cyan
+    }
+}
