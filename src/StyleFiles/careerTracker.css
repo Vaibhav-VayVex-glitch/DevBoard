@@ -1,0 +1,52 @@
+.careerTracker{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+
+.CThead{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border:1px solid pink;
+}
+
+.dataTrackedLane{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border:1px solid green;
+
+    .dataTracked{
+        border:1px solid black;
+    }
+}
+
+
+.search_and_filter{
+    display: flex;
+    flex-direction: row;
+    border: 1px solid brown;
+    justify-content: space-between;
+    
+}
+
+.titles{
+    display: flex;
+    flex-direction: row;
+    border: 1px solid yellow;
+    justify-content: space-around;
+}
+
+.applicationsLane{
+    display: flex;
+    flex-direction: column;
+}
+
+.application{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    border:1px solid gray
+}
