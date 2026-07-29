@@ -3,6 +3,7 @@ import DashBoard from '../DashBoardComponents/DashBoard';
 import SearchPanel from './SearchPanel';
 import DsaTracker from '../DSATracker/DsaTracker';
 import Learning from '../LearningComponents/Learning';
+import Project from '../ProjectsPageComponents/Project'
 
 
 
@@ -17,6 +18,7 @@ function RightPanel(){
             {/* <CareerTracker/> */}
             {/* <DsaTracker/> */}
             {/* <Learning/> */}
+            {/* <Project/> */}
 
         </div>
     )

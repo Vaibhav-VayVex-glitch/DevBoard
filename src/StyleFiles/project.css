@@ -1,0 +1,79 @@
+.projectPage{
+    width:100%;
+    border:1px solid brown;
+}
+
+.Phead{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.overviewLane{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.overviewCard{
+    border:1px solid black;
+}
+
+.statusSelectLane{
+    display: flex;
+    flex-direction: row;
+}
+
+.projectCardsPanel{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+
+.projectCard{
+    display: flex;
+    flex-direction: column;
+    border:1px solid red;
+    margin: 5px;
+}
+
+.projectHeader{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.techStack{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    span{
+        border:1px solid blue;
+    }
+}
+
+.milestones{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+
+.progressSection{
+    display: flex;
+    flex-direction: column;
+}
+
+.progressText{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.projectFooter{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .links a{
+        border:1px solid green;
+    }
+}

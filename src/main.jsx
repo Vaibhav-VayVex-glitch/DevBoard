@@ -8,7 +8,8 @@ import './StyleFiles/rightPanel.css';
 import './StyleFiles/dashboard.css';
 import './StyleFiles/careerTracker.css';
 import './StyleFiles/DsaTracker.css';
-import './StyleFiles/learning.css'
+import './StyleFiles/learning.css';
+import './StyleFiles/project.css'
 
 const root= ReactDOM.createRoot( document.querySelector('.entireProject') );
 
