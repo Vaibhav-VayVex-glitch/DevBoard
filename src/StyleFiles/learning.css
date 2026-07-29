@@ -1,0 +1,59 @@
+.learningPage{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    width: 100%;
+}
+
+.LPhead{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.progressDisplayLane{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.learningDisplay{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+
+.progressCard{
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    gap:3px;
+}
+
+.PChead{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.progressDone{
+    display: flex;
+    flex-direction: column;
+}
+
+.modulesTrackPercent{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.utilitesDate{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .utilites{
+        display: flex;
+        flex-direction: row;
+    }
+}
