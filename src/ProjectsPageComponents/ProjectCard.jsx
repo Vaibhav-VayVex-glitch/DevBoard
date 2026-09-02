@@ -44,7 +44,7 @@ function ProjectCard({
           <span>
             {Math.trunc(
               (completedMilestones * 100) /
-                totalMilestones
+              totalMilestones
             )}
             %
           </span>

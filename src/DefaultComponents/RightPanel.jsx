@@ -1,25 +1,14 @@
-import CareerTracker from '../CareerTrackerComponents/CareerTracker';
-import DashBoard from '../DashBoardComponents/DashBoard';
+import { Outlet } from 'react-router-dom';
 import SearchPanel from './SearchPanel';
-import DsaTracker from '../DSATracker/DsaTracker';
-import Learning from '../LearningComponents/Learning';
-import Project from '../ProjectsPageComponents/Project'
-
-
 
 function RightPanel(){
-
-
+    
     return(
         <div className="rightlane">
 
             <SearchPanel/>
-            {/* <DashBoard/> */}
-            {/* <CareerTracker/> */}
-            {/* <DsaTracker/> */}
-            {/* <Learning/> */}
-            {/* <Project/> */}
 
+            <Outlet/>
         </div>
     )
 }

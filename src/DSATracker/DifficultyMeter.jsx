@@ -1,24 +1,9 @@
-const valueArr=[
-    {
-        category:'Easy',
-        value:100
-    },
-    {
-        category:'Medium',
-        value:145
-    },
-    {
-        category:'hard',
-        value:55
-    },
-    {
-        category:'Total',
-        value:300
-    }
-
-]
+import { useContext } from 'react';
+import {problemDifficultyContext} from '../main';
 
 function DifficultyMeter(){
+
+    const {problemDifficultyArr,updateproblemDifficultyArr} = useContext(problemDifficultyContext);
 
     return(
 
@@ -34,7 +19,7 @@ function DifficultyMeter(){
 
                 <div className="valuesList">
                     {
-                        valueArr.map((obj)=>{
+                        problemDifficultyArr.map((obj)=>{
 
                             return (
                                 <div className='valueBox' id={obj.category} key={obj.category}>

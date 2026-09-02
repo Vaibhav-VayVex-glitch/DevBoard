@@ -1,8 +1,10 @@
 
-function InfoCard({type, image, number, improvement}){
+function InfoCard({type, image, number, improvement,setShowPopUp}){
+
+
 
     return(
-        <div className="infocard">
+        <div className="infocard" onClick={()=>setShowPopUp(true)}>
             
             <div className="type_and_image">
 

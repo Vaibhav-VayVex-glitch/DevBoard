@@ -1,6 +1,8 @@
+import { useNavigate } from "react-router-dom";
+
 const pageCategories = ['Dashboard',
                         'Career', 
-                        'DSA Tracking',
+                        'DsaTracker',
                         'Learning',
                         'Projects',
                         'Notes',
@@ -9,8 +11,15 @@ const pageCategories = ['Dashboard',
                         'Settings'
                     ];
 
+
 function LeftPanel() {
 
+    const navigate= useNavigate();
+
+    function buttonClicks(value){
+        if (value==='Dashboard') navigate('/');
+        else navigate(`/${value}`);
+    }
 
     return (
         <div className="LeftNavigationPanel">
@@ -20,12 +29,12 @@ function LeftPanel() {
                 <div className="logoName">DevBoard</div>
 
                 <div className="pages">
-                    <button className="pageCategory" id="Dashboard">Dashboard</button>
+
 
                     {
                         pageCategories.map((value) => {
                             return (
-                                <button className="pageCategory" key={value}>{value}</button>
+                                <button className="pageCategory" key={value} onClick={()=>{buttonClicks(value)}}>{value}</button>
                             );
                         })
 

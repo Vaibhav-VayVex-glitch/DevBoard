@@ -118,3 +118,42 @@
     height:123px;
     border:1px solid black;
 }
+
+.infoCardPopUp{
+    border:1px solid blue;
+
+    .listBar,.head{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin:2px;
+        gap:50px;
+    }
+
+    margin:5px;
+
+    .cross{
+        cursor: pointer;
+    }
+
+    .subListBar{
+        border:1px solid green;
+
+        span{
+            margin: 0 5px 0 5px;
+        }
+    }
+ 
+}
+
+.overlay{
+    position: fixed;
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(5px);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

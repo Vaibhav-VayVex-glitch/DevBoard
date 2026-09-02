@@ -1,109 +1,13 @@
+import {ApplicationsContext} from '../main';
+import { useContext } from "react";
+
+
 const filterArr=['All','Applied','Interview','Offer','Rejected','Ghosted','Assesment'];
 const titleArr=['Company','Role','Status','Applied','Location','Source','Salary'];
-const applicationsArr=[
-    {
-        company:'google',
-        role:'SWE Intern',
-        status:'Interview',
-        applied:'august 15,2026',
-        location:'Delhi',
-        source:'referal',
-        salary:'$8,000/mo',
-        link:'google.com'
-    },
-    {
-        company:'google',
-        role:'SWE Intern',
-        status:'Interview',
-        applied:'august 15,2026',
-        location:'Delhi',
-        source:'referal',
-        salary:'$8,000/mo',
-        link:'google.com'
-    },
-    {
-        company:'google',
-        role:'SWE Intern',
-        status:'Interview',
-        applied:'august 15,2026',
-        location:'Delhi',
-        source:'referal',
-        salary:'$8,000/mo',
-        link:'google.com'
-    },
-    {
-        company:'google',
-        role:'SWE Intern',
-        status:'Interview',
-        applied:'august 15,2026',
-        location:'Delhi',
-        source:'referal',
-        salary:'$8,000/mo',
-        link:'google.com'
-    },
-    {
-        company:'google',
-        role:'SWE Intern',
-        status:'Interview',
-        applied:'august 15,2026',
-        location:'Delhi',
-        source:'referal',
-        salary:'$8,000/mo',
-        link:'google.com'
-    },
-    {
-        company:'google',
-        role:'SWE Intern',
-        status:'Interview',
-        applied:'august 15,2026',
-        location:'Delhi',
-        source:'referal',
-        salary:'$8,000/mo',
-        link:'google.com'
-    },
-    {
-        company:'google',
-        role:'SWE Intern',
-        status:'Interview',
-        applied:'august 15,2026',
-        location:'Delhi',
-        source:'referal',
-        salary:'$8,000/mo',
-        link:'google.com'
-    },
-    {
-        company:'google',
-        role:'SWE Intern',
-        status:'Interview',
-        applied:'august 15,2026',
-        location:'Delhi',
-        source:'referal',
-        salary:'$8,000/mo',
-        link:'google.com'
-    },
-    {
-        company:'google',
-        role:'SWE Intern',
-        status:'Interview',
-        applied:'august 15,2026',
-        location:'Delhi',
-        source:'referal',
-        salary:'$8,000/mo',
-        link:'google.com'
-    },
-    {
-        company:'google',
-        role:'SWE Intern',
-        status:'Interview',
-        applied:'august 15,2026',
-        location:'Delhi',
-        source:'referal',
-        salary:'$8,000/mo',
-        link:'google.com'
-    }
-]
 
 function ApplicationTable(){
+
+    const {ApplicationsArr,updateApplications}=useContext(ApplicationsContext);
 
     return(
 
@@ -118,7 +22,7 @@ function ApplicationTable(){
                 </div>
 
                 <div className="filters">
-                    {   filterArr.map((val)=> <button id={val} className="filter" key={crypto.randomUUID()}>{val}</button>)   }
+                    {   filterArr.map((val)=> <button id={val} className="filter" key={val}>{val}</button>)   }
                 </div>
 
                 <span className="resultsShowed">10 results</span>
@@ -127,7 +31,7 @@ function ApplicationTable(){
 
             <div className="titles">
                 {
-                    titleArr.map((val)=><span className="title" id={val}>{val}</span>)
+                    titleArr.map((val)=><span className="title" id={val} key={val}>{val}</span>)
                 }
             </div>
 
@@ -135,9 +39,9 @@ function ApplicationTable(){
             <div className="applicationsLane">
                 {
                     
-                    applicationsArr.map((obj)=>{
+                    ApplicationsArr.map((obj)=>{
                         return (
-                            <div className="application" key={crypto.randomUUID()}>
+                            <div className="application" key={obj.company+" "+obj.role}>
 
                                 <span>{obj.company}</span>
                                 <span>{obj.role}</span>

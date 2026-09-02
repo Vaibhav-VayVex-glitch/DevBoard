@@ -1,5 +1,6 @@
 import ApplicationTable from "./ApplicationTable";
 
+
 const dataTrackedArr=[
     {
         value:42,
@@ -20,6 +21,7 @@ const dataTrackedArr=[
 ];
 
 function CareerTracker(){
+
 
     return(
 
