@@ -50,3 +50,33 @@
     justify-content: space-around;
     border:1px solid gray
 }
+
+.ApplicationAddPopUp{
+    width:450px;
+    color:white;
+    background-color: black;
+
+    margin:20px;
+
+    .ApplicationAddHead{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    form{
+        
+        .compulsoryInfo{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+        }
+
+
+
+        div{
+            display: flex;
+            flex-direction: column;
+            margin:5px;
+        }
+    }
+}

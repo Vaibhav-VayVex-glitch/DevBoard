@@ -29,8 +29,8 @@ function LearningProgressPercentage(LearningObj){
 
 function DashBoard(){
 
-    const {ApplicationsArr,updateApplications}=useContext(ApplicationsContext);
-    const {problemDifficultyArr,updateproblemDifficultyArr} = useContext(problemDifficultyContext);
+    const [ApplicationsArr,updateApplications]=useContext(ApplicationsContext);
+    const [problemDifficultyArr,updateproblemDifficultyArr] = useContext(problemDifficultyContext);
     const [projectsObj,updateProjectsObj]=useContext(ProjectsContext);
     const [LearningObj,updateLearningObj]=useContext(LearningContext);
 

@@ -1,13 +1,12 @@
-import {ApplicationsContext} from '../main';
-import { useContext } from "react";
+import { useState } from "react";
 
 
-const filterArr=['All','Applied','Interview','Offer','Rejected','Ghosted','Assesment'];
+const filterArr=['All','Applied','Interview','Offer','Rejected','Ghosted','Assessment'];
 const titleArr=['Company','Role','Status','Applied','Location','Source','Salary'];
 
-function ApplicationTable(){
+function ApplicationTable({ApplicationsArr,updateApplications,filterObj}){
 
-    const {ApplicationsArr,updateApplications}=useContext(ApplicationsContext);
+    const [ApplicationCategory,setApplicationCategory]=useState('All');
 
     return(
 
@@ -22,10 +21,9 @@ function ApplicationTable(){
                 </div>
 
                 <div className="filters">
-                    {   filterArr.map((val)=> <button id={val} className="filter" key={val}>{val}</button>)   }
+                    {   filterArr.map((val)=> <button id={val} className="filter" key={val} onClick={()=>setApplicationCategory(val)}>{val}{ val!='All'&& "("+filterObj[val]+")"}</button>)   }
                 </div>
 
-                <span className="resultsShowed">10 results</span>
 
             </div>
 
@@ -40,7 +38,7 @@ function ApplicationTable(){
                 {
                     
                     ApplicationsArr.map((obj)=>{
-                        return (
+                        if(ApplicationCategory==='All'||ApplicationCategory===obj.status)return (
                             <div className="application" key={obj.company+" "+obj.role}>
 
                                 <span>{obj.company}</span>
@@ -50,6 +48,7 @@ function ApplicationTable(){
                                 <span>{obj.location}</span>
                                 <span>{obj.source}</span>
                                 <span>{obj.salary}</span>
+                                <a href={obj.link}>Link</a>
 
                             </div>
                         )

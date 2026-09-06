@@ -1,27 +1,41 @@
 import ApplicationTable from "./ApplicationTable";
+import AddApplicationPopUp from "./AddApplicationPopUp";
+import {ApplicationsContext} from '../main';
+import { useContext, useState } from "react";
 
 
-const dataTrackedArr=[
-    {
-        value:42,
-        topic:'Total Applications'
-    },
-    {
-        value:42,
-        topic:'Total Applications'
-    },
-    {
-        value:42,
-        topic:'Total Applications'
-    },
-    {
-        value:42,
-        topic:'Total Applications'
-    }
-];
 
 function CareerTracker(){
 
+    const   [ApplicationsArr,updateApplications]=useContext(ApplicationsContext);
+
+    const [addApplication,setAddApplication]= useState(false);
+    
+
+    const dataTrackedArr={
+        'Total Applications':ApplicationsArr.length,
+        'In Progress':0,
+        'Awaiting Response':0,
+        'Offers/Accepted':0
+    };
+
+    const filterObj={
+        'Applied':0,
+        'Interview':0,
+        'Offer':0,
+        'Rejected':0,
+        'Ghosted':0,
+        'Assessment':0
+    }
+
+    ApplicationsArr.forEach( (application) => {
+        if(application.status=='Offer') { dataTrackedArr['Offers/Accepted']++; filterObj['Offer']++;}
+        else if(application.status=='Applied'){dataTrackedArr['Awaiting Response']++; filterObj['Applied']++;}
+        else if(application.status=='Interview'){dataTrackedArr['In Progress']++; filterObj['Interview']++;}
+        else if(application.status=='Rejected'){filterObj['Rejected']++;}
+        else if(application.status=='Ghosted'){dataTrackedArr['Awaiting Response']++; filterObj['Ghosted']++;}
+        else { dataTrackedArr['In Progress']++; filterObj['Assessment']++;}
+    });
 
     return(
 
@@ -35,24 +49,32 @@ function CareerTracker(){
                     <small>Track your job applications and interviews</small>
                 </div>
 
-                <button>+ Add Apllication</button>
+                <button onClick={()=>setAddApplication(true)}>+ Add Apllication</button>
             </div>
 
 
             <div className="dataTrackedLane">
 
                 {
-                    dataTrackedArr.map((obj)=>{
-                        return <div id={obj.topic} className="dataTracked" key={crypto.randomUUID()}>
-                            <p>{obj.value}</p>
-                            <small>{obj.topic}</small>
+                    Object.entries(dataTrackedArr).map(([key,value])=>{
+                        return <div id={key} className="dataTracked" key={key}>
+                            <p>{value}</p>
+                            <small>{key}</small>
                         </div>
                     })
                 }
 
             </div>
 
-            <ApplicationTable/>
+            <ApplicationTable ApplicationsArr={ApplicationsArr} updateApplications={updateApplications} filterObj={filterObj}/>
+            
+            {
+            addApplication && (
+                <div className="overlay" onClick={(e)=> { if(e.target===e.currentTarget||e.target.className=='cross')setAddApplication(false)} } >
+                    <AddApplicationPopUp ApplicationsArr={ApplicationsArr} updateApplications={updateApplications}/>
+                </div>
+                ) 
+            }
 
         </div>
 

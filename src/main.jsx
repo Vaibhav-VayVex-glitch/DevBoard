@@ -66,79 +66,39 @@ const root= ReactDOM.createRoot( document.querySelector('.entireProject') );
 function MainComponent(){
 
     const [ApplicationsArr,updateApplications]= useState([
-            {
-                company: "Vercel",
-                role: "Software Engineer",
-                status: "Offer",
-                applied: "Jan 5, 2024",
-                location: "Remote",
-                source: "Twitter/X",
-                salary: "$160k-$190k"
-            },
-            {
-                company: "Shopify",
-                role: "Backend Engineer",
-                status: "Applied",
-                applied: "Jan 20, 2024",
-                location: "Toronto / Remote",
-                source: "Indeed",
-                salary: "$155k-$185k"
-            },
-            {
-                company: "Notion",
-                role: "SWE - Platform",
-                status: "Applied",
-                applied: "Jan 19, 2024",
-                location: "New York, NY",
-                source: "Company Site",
-                salary: "$165k-$195k"
-            },
-            {
-                company: "Meta",
-                role: "Frontend Engineer",
-                status: "Applied",
-                applied: "Jan 18, 2024",
-                location: "Menlo Park, CA",
-                source: "LinkedIn",
-                salary: "$170k-$200k"
-            },
-            {
-                company: "Linear",
-                role: "Product Engineer",
-                status: "Interview",
-                applied: "Jan 16, 2024",
-                location: "Remote",
-                source: "Hacker News",
-                salary: "$150k-$180k"
-            },
-            {
-                company: "Google",
-                role: "Software Engineer L4",
-                status: "Interview",
-                applied: "Jan 15, 2024",
-                location: "Mountain View, CA",
-                source: "Referral",
-                salary: "$180k-$220k"
-            },
-            {
-                company: "Stripe",
-                role: "Full Stack Engineer",
-                status: "Assessment",
-                applied: "Jan 12, 2024",
-                location: "Remote",
-                source: "Company Site",
-                salary: "$175k-$210k"
-            },
-            {
-                company: "Microsoft",
-                role: "Frontend Engineer",
-                status: "Applied",
-                applied: "Aug 31, 2026",
-                location: "Remote",
-                source: "LinkedIn",
-                salary: "$140k-$170k"
-            }
-
+                {
+            company: "Vercel",
+            role: "Software Engineer",
+            status: "Interview",
+            applied: "Sep 2, 2026",
+            location: "Remote",
+            source: "LinkedIn",
+            salary: "$140k-$170k",
+            link: "https://vercel.com/careers",
+            notes: "Technical interview scheduled for next week."
+        },
+        {
+            company: "Microsoft",
+            role: "Software Engineer Intern",
+            status: "Assessment",
+            applied: "Sep 4, 2026",
+            location: "Hyderabad",
+            source: "College Portal",
+            salary: "₹60k/month",
+            link: "https://careers.microsoft.com",
+            notes: "Online assessment pending."
+        },
+        {
+            company: "Google",
+            role: "Frontend Developer",
+            status: "Applied",
+            applied: "Sep 6, 2026",
+            location: "Bangalore",
+            source: "Company Website",
+            salary: "₹18-25 LPA",
+            link: "https://careers.google.com",
+            notes: "Application submitted successfully."
+        }
     ]);
 
     const [problemDifficultyArr,updateproblemDifficultyArr]=useState(
@@ -368,8 +328,8 @@ function MainComponent(){
     return (
         <LearningContext.Provider value={[LearningObj,updateLearningObj]}>
         <ProjectsContext.Provider value={[projectsObj,updateProjectsObj]}>
-        <problemDifficultyContext.Provider value={{problemDifficultyArr,updateproblemDifficultyArr}}>
-        <ApplicationsContext.Provider value={{ApplicationsArr,updateApplications}}>
+        <problemDifficultyContext.Provider value={[problemDifficultyArr,updateproblemDifficultyArr]}>
+        <ApplicationsContext.Provider value={[ApplicationsArr,updateApplications]}>
         <RouterProvider router={router}/>
         </ApplicationsContext.Provider>
         </problemDifficultyContext.Provider>

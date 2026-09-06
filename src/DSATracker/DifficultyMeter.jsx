@@ -3,7 +3,7 @@ import {problemDifficultyContext} from '../main';
 
 function DifficultyMeter(){
 
-    const {problemDifficultyArr,updateproblemDifficultyArr} = useContext(problemDifficultyContext);
+    const [problemDifficultyArr,updateproblemDifficultyArr] = useContext(problemDifficultyContext);
 
     return(
 
