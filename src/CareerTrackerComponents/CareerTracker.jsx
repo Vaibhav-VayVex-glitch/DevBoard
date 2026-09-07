@@ -71,7 +71,7 @@ function CareerTracker(){
             {
             addApplication && (
                 <div className="overlay" onClick={(e)=> { if(e.target===e.currentTarget||e.target.className=='cross')setAddApplication(false)} } >
-                    <AddApplicationPopUp ApplicationsArr={ApplicationsArr} updateApplications={updateApplications}/>
+                    <AddApplicationPopUp ApplicationsArr={ApplicationsArr} updateApplications={updateApplications} setAddApplication={setAddApplication}/>
                 </div>
                 ) 
             }

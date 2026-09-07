@@ -51,14 +51,14 @@
     border:1px solid gray
 }
 
-.ApplicationAddPopUp{
+.ApplicationAddPopUp,.ApplicationEditPopUp{
     width:450px;
     color:white;
     background-color: black;
 
     margin:20px;
 
-    .ApplicationAddHead{
+    .ApplicationAddHead,.ApplicationEditHead{
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -77,6 +77,67 @@
             display: flex;
             flex-direction: column;
             margin:5px;
+        }
+    }
+}
+
+
+.sideBar{
+    height: 100vh;
+    width:400px;
+    background-color: antiquewhite;
+
+
+    .sideBarhead{
+        display: flex;
+        justify-content: space-between;
+        margin:10px;
+    }
+
+    .statusEdit{
+        margin:10px;
+        span{
+            margin:3px;
+            border:1px solid black;
+        }
+
+        .statusCategories{
+            display: flex;
+            flex-wrap: wrap;
+        }
+    }
+
+
+    .jobInfo{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(2,1fr);
+
+        .infoBox{
+            border:1px solid black;
+            margin:5px;
+        }
+    }
+
+    .jobLink{
+        border:1px solid black;
+        margin:10px;
+    }
+
+    .notesBox{
+        margin:5px;
+        .notesContent{
+            border:1px solid black;
+        }
+    }
+
+    .editDelete{
+        display: flex;
+        justify-content: space-between;
+
+        button{
+            width:80px;
+            height:40px;
         }
     }
 }

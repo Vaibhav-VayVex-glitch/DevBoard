@@ -1,6 +1,6 @@
 import { useForm } from 'react-hook-form';
 
-function AddApplicationPopUp({ApplicationsArr,updateApplications}){
+function AddApplicationPopUp({ApplicationsArr,updateApplications,setAddApplication}){
 
     const {
     register,
@@ -10,21 +10,11 @@ function AddApplicationPopUp({ApplicationsArr,updateApplications}){
 
     function addData(data){
 
-        const newApplication={
-                company: data.company,
-                role: data.role,
-                status: data.status,
-                applied: data.appliedDate,
-                location: data.location,
-                source: data.source,
-                salary: data.salary,
-                link:data.jobLink,
-                notes:data.notes
-        }
+        setAddApplication(false);
 
         updateApplications(prev=>[
             ...prev,
-            newApplication
+            data
         ])
     }
 

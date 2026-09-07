@@ -147,21 +147,7 @@
  
 }
 
-.cross{
-        cursor: pointer;
-}
 
-.overlay{
-    position: fixed;
-    inset: 0;
-
-    background: rgba(0, 0, 0, 0.4);
-    backdrop-filter: blur(5px);
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
 .addGoalPopUp{
 

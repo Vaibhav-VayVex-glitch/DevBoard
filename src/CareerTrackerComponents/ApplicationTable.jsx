@@ -1,4 +1,5 @@
 import { useState } from "react";
+import SideBarPopUp from "./SideBarPopUp";
 
 
 const filterArr=['All','Applied','Interview','Offer','Rejected','Ghosted','Assessment'];
@@ -7,6 +8,9 @@ const titleArr=['Company','Role','Status','Applied','Location','Source','Salary'
 function ApplicationTable({ApplicationsArr,updateApplications,filterObj}){
 
     const [ApplicationCategory,setApplicationCategory]=useState('All');
+
+    const [showSidePopUp,setShowSidePopUp]=useState(false);
+    const [sidePopUpJob,setShowSidePopUpJob]=useState(null);
 
     return(
 
@@ -39,7 +43,12 @@ function ApplicationTable({ApplicationsArr,updateApplications,filterObj}){
                     
                     ApplicationsArr.map((obj)=>{
                         if(ApplicationCategory==='All'||ApplicationCategory===obj.status)return (
-                            <div className="application" key={obj.company+" "+obj.role}>
+                            <div className="application" key={obj.company+" "+obj.role}
+                                onClick={()=>{
+                                    setShowSidePopUp(true);
+                                    setShowSidePopUpJob(obj);
+                                }}
+                            >
 
                                 <span>{obj.company}</span>
                                 <span>{obj.role}</span>
@@ -48,7 +57,6 @@ function ApplicationTable({ApplicationsArr,updateApplications,filterObj}){
                                 <span>{obj.location}</span>
                                 <span>{obj.source}</span>
                                 <span>{obj.salary}</span>
-                                <a href={obj.link}>Link</a>
 
                             </div>
                         )
@@ -56,6 +64,14 @@ function ApplicationTable({ApplicationsArr,updateApplications,filterObj}){
 
                 }
             </div>
+
+            {
+            showSidePopUp && (
+                <div className="overlay sideBarOverlay" onClick={(e)=> { if(e.target===e.currentTarget||e.target.className=='cross')setShowSidePopUp(false)} } >
+                    <SideBarPopUp    applicationObj={sidePopUpJob}   applicationArr={ApplicationsArr} updateApplications={updateApplications} setShowSidePopUp={setShowSidePopUp}  />
+                </div>
+                ) 
+            }
 
 
         </div>

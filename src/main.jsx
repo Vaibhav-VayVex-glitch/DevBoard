@@ -11,6 +11,7 @@ import './StyleFiles/careerTracker.css';
 import './StyleFiles/DsaTracker.css';
 import './StyleFiles/learning.css';
 import './StyleFiles/project.css';
+import './index.css';
 
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import DashBoard from './DashBoardComponents/DashBoard';
@@ -70,7 +71,7 @@ function MainComponent(){
             company: "Vercel",
             role: "Software Engineer",
             status: "Interview",
-            applied: "Sep 2, 2026",
+            applied: "2026-09-02",
             location: "Remote",
             source: "LinkedIn",
             salary: "$140k-$170k",
@@ -81,7 +82,7 @@ function MainComponent(){
             company: "Microsoft",
             role: "Software Engineer Intern",
             status: "Assessment",
-            applied: "Sep 4, 2026",
+            applied: "2026-09-04",
             location: "Hyderabad",
             source: "College Portal",
             salary: "₹60k/month",
@@ -92,7 +93,7 @@ function MainComponent(){
             company: "Google",
             role: "Frontend Developer",
             status: "Applied",
-            applied: "Sep 6, 2026",
+            applied: "2026-09-06",
             location: "Bangalore",
             source: "Company Website",
             salary: "₹18-25 LPA",
